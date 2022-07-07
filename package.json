@@ -1,0 +1,17 @@
+{
+  "name": "keenansmakerservice",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:r3vert/keenansmakerservice.git",
+  "author": "Keenan Homsi <keenanhomsi@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "eleventy --serve & npx tailwindcss -i assets/styles/tailwind.css -c ./tailwind.config.js -o _site/style.css --watch",
+    "build": "ELEVENTY_PRODUCTION=true eleventy && NODE_ENV=production npx tailwindcss -i styles/tailwind.css -c styles/tailwind.config.js -o _site/style.css --minify"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.1",
+    "@tailwindcss/typography": "^0.5.2",
+    "tailwindcss": "^3.1.4"
+  }
+}
